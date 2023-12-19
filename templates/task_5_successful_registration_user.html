@@ -1,0 +1,16 @@
+{% extends 'task_1_base.html' %}
+
+{% block content %}
+
+        {% with messages = get_flashed_messages(with_categories=false) %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>
+                        Поздравляем ! <br>
+                        {{ message }}
+                    </p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+{% endblock %}
